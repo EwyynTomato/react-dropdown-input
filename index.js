@@ -254,8 +254,11 @@ var DropdownInput = React.createClass({
     if (this.props.onSelect) {
       this.props.onSelect(e);
     }
-  }
+  },
 
+  setSelected: function setValue(name) {
+    this.setState({ value: name, activeIndex: -1 });
+  }
 });
 
 module.exports = DropdownInput;
